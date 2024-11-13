@@ -7,6 +7,8 @@ import { RippleElement } from '../ripple/index.js';
 
 const { cssClasses, strings } = MDCTopAppBarFoundation;
 
+// Ensure HTMLElement is defined in SSR environment
+const { HTMLElement = {} } = globalThis;
 export default {
   name: 'mcw-top-app-bar',
   props: {

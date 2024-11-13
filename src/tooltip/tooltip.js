@@ -146,10 +146,7 @@ export default {
       },
 
       getTooltipCaretBoundingRect: () => {
-        const caret =
-          uiState.root.querySelector <
-          HTMLElement >
-          `.${CssClasses.TOOLTIP_CARET_TOP}`;
+        const caret = uiState.root.querySelector(`.${CssClasses.TOOLTIP_CARET_TOP}`);
         if (!caret) {
           return;
         }
@@ -157,14 +154,8 @@ export default {
       },
 
       setTooltipCaretStyle: (propertyName, value) => {
-        const topCaret =
-          uiState.root.querySelector <
-          HTMLElement >
-          `.${CssClasses.TOOLTIP_CARET_TOP}`;
-        const bottomCaret =
-          uiState.root.querySelector <
-          HTMLElement >
-          `.${CssClasses.TOOLTIP_CARET_BOTTOM}`;
+        const topCaret = uiState.root.querySelector(`.${CssClasses.TOOLTIP_CARET_TOP}`);
+        const bottomCaret = uiState.root.querySelector(`.${CssClasses.TOOLTIP_CARET_BOTTOM}`);
 
         if (!topCaret || !bottomCaret) {
           return;
@@ -175,14 +166,8 @@ export default {
       },
 
       clearTooltipCaretStyles: () => {
-        const topCaret =
-          uiState.root.querySelector <
-          HTMLElement >
-          `.${CssClasses.TOOLTIP_CARET_TOP}`;
-        const bottomCaret =
-          uiState.root.querySelector <
-          HTMLElement >
-          `.${CssClasses.TOOLTIP_CARET_BOTTOM}`;
+        const topCaret = uiState.root.querySelector(`.${CssClasses.TOOLTIP_CARET_TOP}`);
+        const bottomCaret = uiState.root.querySelector(`.${CssClasses.TOOLTIP_CARET_BOTTOM}`);
 
         if (!topCaret || !bottomCaret) {
           return;

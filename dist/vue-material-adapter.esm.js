@@ -8009,15 +8009,15 @@ var script = {
         emit(events$1.HIDDEN.toLowerCase(), {});
       },
       getTooltipCaretBoundingRect: () => {
-        const caret = uiState.root.querySelector < HTMLElement > `.${CssClasses$1.TOOLTIP_CARET_TOP}`;
+        const caret = uiState.root.querySelector(`.${CssClasses$1.TOOLTIP_CARET_TOP}`);
         if (!caret) {
           return;
         }
         return caret.getBoundingClientRect();
       },
       setTooltipCaretStyle: (propertyName, value) => {
-        const topCaret = uiState.root.querySelector < HTMLElement > `.${CssClasses$1.TOOLTIP_CARET_TOP}`;
-        const bottomCaret = uiState.root.querySelector < HTMLElement > `.${CssClasses$1.TOOLTIP_CARET_BOTTOM}`;
+        const topCaret = uiState.root.querySelector(`.${CssClasses$1.TOOLTIP_CARET_TOP}`);
+        const bottomCaret = uiState.root.querySelector(`.${CssClasses$1.TOOLTIP_CARET_BOTTOM}`);
         if (!topCaret || !bottomCaret) {
           return;
         }
@@ -8025,8 +8025,8 @@ var script = {
         bottomCaret.style.setProperty(propertyName, value);
       },
       clearTooltipCaretStyles: () => {
-        const topCaret = uiState.root.querySelector < HTMLElement > `.${CssClasses$1.TOOLTIP_CARET_TOP}`;
-        const bottomCaret = uiState.root.querySelector < HTMLElement > `.${CssClasses$1.TOOLTIP_CARET_BOTTOM}`;
+        const topCaret = uiState.root.querySelector(`.${CssClasses$1.TOOLTIP_CARET_TOP}`);
+        const bottomCaret = uiState.root.querySelector(`.${CssClasses$1.TOOLTIP_CARET_BOTTOM}`);
         if (!topCaret || !bottomCaret) {
           return;
         }
@@ -8194,6 +8194,7 @@ var tooltip = BasePlugin({
 });
 
 const { cssClasses, strings } = MDCTopAppBarFoundation;
+const { HTMLElement = {} } = globalThis;
 var mcwTopAppBar = {
   name: "mcw-top-app-bar",
   props: {
